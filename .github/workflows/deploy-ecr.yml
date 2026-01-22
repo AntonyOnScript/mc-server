@@ -34,22 +34,17 @@ jobs:
         id: build-image
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          IMAGE_TAG: ${{ github.sha }}
+          IMAGE_TAG: latest
         run: |
           # Build the Docker image using docker compose
           docker compose build mc
           
           # The image will be tagged as specified in docker-compose.yml (itzg/minecraft-server:stable)
           # Tag it for ECR
-          docker tag itzg/minecraft-server:stable $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-          docker tag $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG $ECR_REGISTRY/$ECR_REPOSITORY:latest
+          docker tag itzg/minecraft-server:stable 545122900000.dkr.ecr.us-east-1.amazonaws.com/itzg/minecraft-server:latest
           
           # Push both tags
-          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-          docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
-          
-          echo "image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
-
+          docker push 545122900000.dkr.ecr.us-east-1.amazonaws.com/itzg/minecraft-server:latest
       - name: Output image URI
         run: |
           echo "Image pushed to: ${{ steps.build-image.outputs.image }}"
