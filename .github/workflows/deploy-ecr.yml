@@ -37,7 +37,7 @@ jobs:
           IMAGE_TAG: latest
         run: |
           # Build the Docker image using docker compose
-          docker compose build mc
+          docker build -t itzg/minecraft-server:stable .
           
           # The image will be tagged as specified in docker-compose.yml (itzg/minecraft-server:stable)
           # Tag it for ECR
