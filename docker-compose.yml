@@ -1,0 +1,26 @@
+services:
+  mc:
+    container_name: mc-server
+    image: itzg/minecraft-server:stable
+    tty: true
+    stdin_open: true
+    ports:
+      - "25565:25565"
+    environment:
+      TYPE: "PAPER"
+      EULA: "TRUE"
+      VERSION: "1.21.8"
+      MEMORY: "1536M"
+      MAX_PLAYERS: "6"
+      MOTD: "Servidor do Antonyo"
+      ONLINE_MODE: "false"
+      TZ: "America/Sao_Paulo"
+      ENABLE_AUTOPAUSE: "TRUE"
+      DIFFICULTY: "normal"
+      ICON: "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcRB9Hno3-\
+        hIMrYk3iYCOiSjU1vc511e7cRZ59q5iUHJrJq-E6VCVn9rM1V5-c3A4qG8WYh3pGSBLjdEQ\
+        hVXfP97lo5vzsmhf9bCSMJmrXslLeD20M37BOVLqrO-Art8NJ9oIrU89DO8OlM&s=19"
+      OVERRIDE_ICON: "true"
+    volumes:
+      - "./data:/data"
+      - "./plugins:/plugins"
