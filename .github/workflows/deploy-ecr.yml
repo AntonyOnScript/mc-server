@@ -36,6 +36,7 @@ jobs:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           IMAGE_TAG: latest
         run: |
+          ls -la
           # Build the Docker image using docker compose
           docker build -t itzg/minecraft-server:stable .
           

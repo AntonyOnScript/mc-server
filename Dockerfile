@@ -1,8 +1,10 @@
 FROM itzg/minecraft-server:stable
 
-# Copy custom data and plugins into the image
+USER root
 COPY data /data
 COPY plugins /plugins
+RUN chown -R 1000:1000 /data /plugins
+USER 1000 
 
 # Set environment variables
 ENV TYPE="PAPER"
