@@ -1,1 +1,26 @@
-{"stats":{"minecraft:picked_up":{"minecraft:birch_log":1},"minecraft:mined":{"minecraft:short_grass":1,"minecraft:birch_log":1},"minecraft:custom":{"minecraft:sprint_one_cm":834,"minecraft:time_since_rest":4254,"minecraft:fall_one_cm":2370,"minecraft:walk_one_cm":2582,"minecraft:total_world_time":4254,"minecraft:leave_game":7,"minecraft:fly_one_cm":1416,"minecraft:damage_taken":40,"minecraft:play_time":4254,"minecraft:jump":17,"minecraft:time_since_death":4254}},"DataVersion":4440}
+{
+  "stats": {
+    "minecraft:mined": {
+      "minecraft:short_grass": 1,
+      "minecraft:birch_log": 1,
+      "minecraft:birch_leaves": 1
+    },
+    "minecraft:picked_up": {
+      "minecraft:birch_log": 1
+    },
+    "minecraft:custom": {
+      "minecraft:sprint_one_cm": 1736,
+      "minecraft:time_since_rest": 7776,
+      "minecraft:fall_one_cm": 3795,
+      "minecraft:walk_one_cm": 8726,
+      "minecraft:total_world_time": 7776,
+      "minecraft:leave_game": 8,
+      "minecraft:fly_one_cm": 2372,
+      "minecraft:damage_taken": 50,
+      "minecraft:play_time": 7776,
+      "minecraft:jump": 60,
+      "minecraft:time_since_death": 7776
+    }
+  },
+  "DataVersion": 4671
+}
